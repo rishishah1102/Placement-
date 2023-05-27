@@ -1,0 +1,7 @@
+The recursions are the functions which call itself.
+
+The recursions will execute untill there is a base condition in it.
+
+Each time the recursion call is made the same variable occupy the space in memory. But the same was not happening in the iteration beacuse it was overwriting the variable in memory rather creating the new variable each time.
+
+Hence we require a base condition in recursion otherwise it will run infinite and will occupy the whole space our memory.

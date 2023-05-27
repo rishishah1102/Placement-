@@ -1,0 +1,8 @@
+Bubble Sort :-
+-> In bubble sort the largest element is pushed to last in each iteration. The time complexity is n^2. Here there is swapping for each comparision.
+
+Selection Sort :-
+-> In selection sort the smallest is pushed to first place in each iteration but here there is only swapping per each iteration. The time complexity is n^2.
+
+Insertion Sort :-
+-> In insertion sort there are two parts sorted and unsorted. Here we take one element from unsorted list and put that element at its appropriate place in sorted list. The time complexity is n^2.

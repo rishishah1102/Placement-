@@ -1,0 +1,79 @@
+Class & Object :-
+    ->The class and objects was introduced in java to solve real world problems.
+    ->eg- If we take example of maruti 800 car than the car would be developed in following ways:-
+        -> There would be develop a blueprint of car
+        -> And secondly the car would be made.
+
+    ->So the blueprint of this car we can say that this refers to class.
+
+    ->And the actual car would refered as object in OOP. And entity that has been developed by keeping in mind of blueprint is termed as an object.
+
+This keyword :-
+    -> ‘this’ keyword in Java that refers to the current instance of the class. In OOPS it is used to: 
+        -> pass the current object as a parameter to another method.
+        -> refer to the current class instance variable.
+
+
+Constructors :-
+    ->The constructors are like functions in java which is used to create an instance of class. They dont have any return type and their names are same as class name. They just constructs the objects.
+
+    ->Polymorphism means many forms. It is the ability by which we can display message in more than one form. There are two types of polymorphism 
+        -> function overloading (compile time polymorphism)
+        -> function overidding (run-time polymorphism)
+
+    ->We need polymorphism because ...
+
+    ->The function overloading means we can write the functions with names but with different functionality.
+
+    -> Runtime polymorphism is also known as dynamic polymorphism. Function overriding is an example of runtime polymorphism. Function overriding means when the child class contains the method which is already present in the parent class. Hence, the child class overrides the method of the parent class.
+
+Inheritance :-
+    ->Inheritance - When one class want to have same properties that a second class possess than we can inherit that properties in first class. This is known as Inheritance. We need Inheritance because it reduces the lines of code.
+
+    -> There are 4 types of inheritance
+        -> Single Level inheritance
+        -> Multi Level inheritance
+        -> Hierarchical Level inheritance
+        -> Hybrid Level inheritance
+        -> The multiple inheritance is not supported in java to prevent it from ambigous. If there are same methods in two different classes and both the class are inherited by some other class than at the time of compiling the compiler would be confused which method to run. So to avoid this conflicts the java does not support Multiple inheritance.
+
+Packages 
+    -> The packages is a container which contains same type of class. eg- Package of Pen, Eraser etc.
+
+    -> There are two types of packages in java 
+        -> Built-In packages - These packages are those which are already build in java.
+        -> User-Defined packages - These are the packages which are defined by the user.
+
+Access Modifiers
+    -> The acces modifiers specifies the scope of method, properties, class and constructors.
+
+    -> There are four types of access modifiers
+        -> Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+
+        -> Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+
+        -> Protected: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.
+
+        -> Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+
+Encapsulation
+    -> The encapsulation means binding data into one part. Here we do it by binding in a class. Also the data hiding is done through access modifiers.
+
+Abstraction 
+    ->  The data abstraction is the process by which we can define an abstract blue print. 
+
+    -> eg :- Consider there is a animal class. This class is abstract because we can that there would be an animal. But when we use horse than we know that horse is a animal.
+
+    -> This is achieved by two ways:-
+        -> Abstract Class
+        -> Interfaces - It is an abstract "class" that is used to group related methods with "empty" bodies.
+
+        -> Abstract Class:- An abstract class must be declared with an abstract keyword.It can have abstract and non-abstract methods. It cannot be instantiated. It can have constructors and static methods also. It can have final methods which will force the subclass not to change the body of the method.
+        
+        -> Interfaces:- All the fields in interfaces are public, static and final by default. All methods are public & abstract by default. A class that implements an interface must implement all the methods declared in the interface. Interfaces support the functionality of multiple inheritance. 
+            -> The multiple interface is supported in java because in interface we just define the properties and methods but the actual implementation is done in the implemented class. So no chance of ambiguity.
+
+static
+    -> Static keyword means all the methods and properties would be same throughout the package.
+    -> If any method or property whose value is same for all objects than we can make it static.
+    -> It can be accessed in main class as class.property_name.

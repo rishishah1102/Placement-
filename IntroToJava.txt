@@ -1,0 +1,37 @@
+The java development kit is required to java programs. The jdk is the software which allows the programmer to develop the java program.
+
+What is jdk?
+-> The jdk is java development kit which contain the tools and jre.
+
+Why we use jdk?
+-> We use jdk to develop java program.
+
+How to use jdk?
+-> To use jdk we need to set path of bin in environment variables and then type javac in command prompt.
+
+What is jre?
+-> The jre is the Java Runtime Environment which contain the libraries and jvm.
+
+Why we use jre?
+-> We use jre to run java code on our device.
+
+How to use jre?
+-> When you run your java code the jre is run.
+
+What is jvm?
+The java virtual machine is the machine that executes the java code.
+
+Why we use jvm?
+-> We use jvm to verify and executes the java bytecode.
+
+How is the code run in java?
+-> The code is run in two steps :-
+   1- Compilation :- It is process in which our java-source-code[whose extension is .java] is converted into bytecode[whose extension is .class]. The java source is converted by the compiler which resides inside the jdk.
+
+   2- Execution :- It is the process in which our java bytecode[.class] is converted into machine language i.e. in binary form. The jvm takes the bytecode and converts it into binary form.
+
+The main function is the function by which our program execution starts. The void means null[khali/empty].
+
+The unary operators are those operators who performs the operation in only one operand.
+
+The binary operators are those operators who performs the operation between two operands.
