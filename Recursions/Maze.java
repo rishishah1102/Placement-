@@ -21,9 +21,9 @@ public class Maze {
 
     public static void main(String[] args) {
         // Count the total paths in maze to move from (0,0) to (n,m). You can only moveright or downward.
-        int n = 3;
-        int m = 4;
+        int n = 4;
+        int m = 5;
         mazePath(n, m, 0, 0);
-        System.out.println("The total paths to move from (0,0} to (n,m) is " + count);
+        System.out.println("The total paths to move from (0,0) to (" + n + "," + m + ") is " + count);
     }
 }
