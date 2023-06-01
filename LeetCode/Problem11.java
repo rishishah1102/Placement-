@@ -7,25 +7,24 @@ public class Problem11 {
         }
 
         int maxArea = 0;
+        int j = height.length - 1;
 
-        for (int i = 0; i < height.length - 1; i++) {
-            for (int j = i + 1; j < height.length; j++) {
-                int temp;
-                if (height[j] > height[i]) {
-                    temp = height[i] * (j-i);
-                    maxArea = Math.max(maxArea, temp);
-                }
-                if (height[j] <= height[i]) {
-                    temp = height[j] * (j-i);
-                    maxArea = Math.max(maxArea, temp);
-                }
+        for (int i = 0; i < j;) {
+            int temp;
+            if (height[i] > height[j]) {
+                temp = height[j] * (j - i);
+                j--;
+            } else {
+                temp = height[i] * (j - i);
+                i++;
             }
+            maxArea = Math.max(maxArea, temp);
         }
         return maxArea;
     }
 
     public static void main(String[] args) {
-        int height[] = {1,1};
+        int height[] = { 1, 1 };
 
         System.out.println(maxArea(height));
     }

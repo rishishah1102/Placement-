@@ -1,47 +1,57 @@
 package LeetCode;
 
 public class Problem8 {
-    public static int myAtoi(String s) {
-        if (s.length() == 0 || s.length() > 200 || s.length() < 0) {
+    public static int myAtoi(String str) {
+        int len = str.length();
+
+        if (len == 0) {
             return 0;
         }
 
-        int i = 0;
-        int digit = 0;
-        boolean sign = true;
+        int index = 0;
 
-        while (i < s.length()) {
-            if (Character.isDigit(s.charAt(i))) {
-                digit = s.charAt(i) - '0' + 10 * digit;
-                if (digit > Integer.MAX_VALUE / 10) {
-                    return Integer.MAX_VALUE;
-                }
-            }
-            if (s.charAt(i) == '+' || s.charAt(i) == '-') {
-                sign = s.charAt(i) == '+' ? true : false;
-            }
-            if (s.charAt(i) == ' ') {
-                continue;
-            }
-            if (!Character.isDigit(s.charAt(i))) {
-                break;
-            }
-            i++;
+        // skipping white spaces
+        while (index < len && str.charAt(index) == ' ') {
+            ++index;
         }
 
-        if (!sign) {
-            digit = (~(digit - 1));
-            if (digit < Integer.MIN_VALUE / 10) {
-                return Integer.MIN_VALUE;
+        boolean isNegative = false;
+
+        // to handle sign cases
+        if (index < len) {
+            if (str.charAt(index) == '-') {
+                isNegative = true;
+                ++index;
+            } else if (str.charAt(index) == '+') {
+                ++index;
             }
-            return digit;
+
         }
 
-        return digit;
+        int result = 0;
+
+        while (index < len && Character.isDigit(str.charAt(index))) {
+
+            int digit = str.charAt(index) - '0';
+
+            // to avoid integer overflow
+            double temp = (double)(result * 10.0) + digit;
+            
+            if (temp > Integer.MAX_VALUE) {
+                return isNegative ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+            }
+
+            // adding digits at their desired place-value
+            result = (int) temp;
+
+            ++index;
+        }
+
+        return isNegative ? -result : result;
     }
 
     public static void main(String[] args) {
-        String s = "  42";
+        String s = "-91283472332";
 
         System.out.println(myAtoi(s));
     }
