@@ -1,15 +1,15 @@
 package LeetCode;
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-}
-
 public class Problem21 {
+    public static class ListNode {
+        int val;
+        ListNode next;
+    
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+    
     public static ListNode mergeLists(ListNode l1, ListNode l2) {
         // Create a dummy node as the head of the merged list
         ListNode dummy = new ListNode(0);

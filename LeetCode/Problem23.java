@@ -3,16 +3,18 @@ package LeetCode;
 import java.util.PriorityQueue;
 
 // Definition for singly-linked list.
-class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode(int val) {
-        this.val = val;
-    }
-}
 
 public class Problem23 {
+    public static class ListNode {
+        int val;
+        ListNode next;
+    
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+    
     public static ListNode mergeKLists(ListNode[] lists) {
         PriorityQueue<ListNode> minHeap = new PriorityQueue<>((a, b) -> a.val - b.val);
 
